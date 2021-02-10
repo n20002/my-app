@@ -9,9 +9,9 @@ function App () {
   const [query, setQuery] = useState('') // 今なんの文字列で検索してるかを保持する
   useEffect(() => {
     fetch(
-      `https://api.unsplash.com/search/photos?query=${query}&client_id=${process.env.REACT_APP_CLIENT_ID}`
+      `https://api.unsplash.com/search/photos?query=${query}&client_id=${process.env.REACT_APP_CLIENT_ID}` // データ取得、アクセスキーは環境変数にしてる
     )
-      .then(response => response.json())
+      .then(response => response.json()) // jsonデータにする
       .then(data => {
         setImages(data.results) // 取ってきたデータをImagesに入れる
       })
@@ -19,7 +19,7 @@ function App () {
 
   const onSubmit = e => {
     e.preventDefault() // 画面遷移を防ぐ
-    setQuery(text)
+    setQuery(text) // 引数にinputタグに入れられたのを入れるからtext
     setText('') // まっさらにまた戻す
   }
 
