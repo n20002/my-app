@@ -12,7 +12,7 @@
     "react-scripts": "4.0.2",
     "web-vitals": "^1.1.0"
   },
-  "homepage": "http://n20002.github.io/my-app",
+  "homepage": "https://n20002.github.io/my-app",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
