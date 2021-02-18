@@ -11,7 +11,7 @@ function App () {
     fetch(
       `https://api.unsplash.com/search/photos?query=${query}&client_id=${process.env.REACT_APP_CLIENT_ID}` // データ取得、アクセスキーは環境変数にしてる
     )
-      .then(response => response.json()) // jsonデータにする
+      .then(response => response.json()) // responseオブジェクトが返ってくるからそれをjsonデータにする
       .then(data => {
         setImages(data.results) // 取ってきたデータをImagesに入れる
       })
